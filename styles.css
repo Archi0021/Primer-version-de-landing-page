@@ -79,7 +79,7 @@ nav a {
 .catalogo .producto img {
   width: 100%;
   height: 200px;
-  -o-object-fit: cover;
+  object-fit: cover;
   border-radius: 8px;
   display: block;
   margin: 0 auto;
@@ -129,4 +129,54 @@ footer a {
   .jumbotron button {
     width: 100%;
   }
+}
+/* CRUD Formulario */
+#product-form {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin: 1em auto;
+  justify-content: center;
+}
+
+#product-form input, #product-form button {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#product-form button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* CRUD Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 0.8em;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.4em 0.8em;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 0.4em 0.8em;
+  border: none;
+  cursor: pointer;
 }

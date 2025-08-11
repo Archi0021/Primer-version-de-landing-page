@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personaliza Tu Estilo</title>
+  <title>Personaliza Tu Estilo - CRUD</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,7 +19,7 @@
       </nav>
     </header>
 
-    <!-- JUMBOTRON / PRESENTACIÓN -->
+    <!-- JUMBOTRON -->
     <section class="jumbotron">
       <h2>¡Haz únicos tus productos favoritos!</h2>
       <p>Diseñamos tazas, playeras, gorras, pines y más, totalmente personalizados.</p>
@@ -27,52 +27,32 @@
         <input type="email" placeholder="Ingresa tu correo para novedades" />
         <button type="submit">Suscribirme</button>
       </form>
-      <!-- Imagen opcional del producto -->
-      <!-- <img src="img/jumbotron-producto.jpg" alt="Productos personalizados"> -->
     </section>
 
-    <!-- CATÁLOGO -->
-        <div class="productos">
-      <h3>¡Nuestros Productos!</h3>
-        </div>
+    <!-- CRUD - Formulario -->
+    <section class="productos">
+      <h3>Gestión de Productos</h3>
+      <form id="product-form">
+        <input type="text" id="name" placeholder="Nombre del producto" required>
+        <input type="text" id="price" placeholder="Precio" required>
+        <input type="text" id="status" placeholder="Estado" required>
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
 
-      <section class="catalogo" id="productos">
-      <div class="producto">
-        <img src="img/taza.jpg" alt="Taza personalizada" />
-        <h4>Tazas</h4>
-        <p>Desde $75 MXN</p>
-      </div>
-
-      <div class="producto">
-        <img src="img/playera.jpg" alt="Playera personalizada" />
-        <h4>Playeras</h4>
-        <p>Desde $200 MXN</p>
-      </div>
-
-      <div class="producto">
-        <img src="img/gorra.jpg" alt="Gorra personalizada" />
-        <h4>Gorras</h4>
-        <p>Desde $80 MXN</p>
-      </div>
-
-      <div class="producto">
-        <img src="img/pin.jpg" alt="Pines personalizados" />
-        <h4>Pines</h4>
-        <p>Desde $15 MXN</p>
-      </div>
-
-      <div class="producto">
-        <img src="img/stickers.jpg" alt="Stickers personalizados" />
-        <h4>Stickers</h4>
-        <p>Desde $15 MXN</p>
-      </div>
-
-      <div class="producto">
-        <img src="img/azulejo.jpg" alt="Azulejos personalizados" />
-        <h4>Azulejos</h4>
-        <p>Desde $150 MXN</p>
-      </div>
-
+    <!-- CRUD - Tabla -->
+    <section class="catalogo" id="productos">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="product-list"></tbody>
+      </table>
     </section>
 
     <!-- SECCIÓN ADICIONAL -->
@@ -97,5 +77,7 @@
       </ul>
     </footer>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
